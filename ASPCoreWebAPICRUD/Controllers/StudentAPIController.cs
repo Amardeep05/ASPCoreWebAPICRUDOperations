@@ -17,7 +17,7 @@ namespace ASPCoreWebAPICRUD.Controllers
         {
             this.dbContext = dbContext;
         }
-        [HttpGet]
+        [HttpGet] //Get all student data
         public async Task<ActionResult<List<Student>>> GetStudent()
         {
             var data = await dbContext.Students.ToListAsync();
